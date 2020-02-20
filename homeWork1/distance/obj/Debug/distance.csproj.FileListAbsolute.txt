@@ -1,0 +1,7 @@
+D:\Drive\YandexDisk\Обучение\Код\C# Уровень1\homeWork1\distance\bin\Debug\distance.exe.config
+D:\Drive\YandexDisk\Обучение\Код\C# Уровень1\homeWork1\distance\bin\Debug\distance.exe
+D:\Drive\YandexDisk\Обучение\Код\C# Уровень1\homeWork1\distance\bin\Debug\distance.pdb
+D:\Drive\YandexDisk\Обучение\Код\C# Уровень1\homeWork1\distance\obj\Debug\distance.csprojAssemblyReference.cache
+D:\Drive\YandexDisk\Обучение\Код\C# Уровень1\homeWork1\distance\obj\Debug\distance.csproj.CoreCompileInputs.cache
+D:\Drive\YandexDisk\Обучение\Код\C# Уровень1\homeWork1\distance\obj\Debug\distance.exe
+D:\Drive\YandexDisk\Обучение\Код\C# Уровень1\homeWork1\distance\obj\Debug\distance.pdb
