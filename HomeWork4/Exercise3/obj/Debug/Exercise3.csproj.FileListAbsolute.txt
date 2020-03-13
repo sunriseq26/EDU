@@ -1,0 +1,6 @@
+D:\Drive\YandexDisk\GIT\HomeWork4\Exercise3\bin\Debug\Exercise3.exe.config
+D:\Drive\YandexDisk\GIT\HomeWork4\Exercise3\bin\Debug\Exercise3.exe
+D:\Drive\YandexDisk\GIT\HomeWork4\Exercise3\bin\Debug\Exercise3.pdb
+D:\Drive\YandexDisk\GIT\HomeWork4\Exercise3\obj\Debug\Exercise3.csprojAssemblyReference.cache
+D:\Drive\YandexDisk\GIT\HomeWork4\Exercise3\obj\Debug\Exercise3.exe
+D:\Drive\YandexDisk\GIT\HomeWork4\Exercise3\obj\Debug\Exercise3.pdb
