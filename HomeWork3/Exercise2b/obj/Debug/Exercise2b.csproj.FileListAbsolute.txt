@@ -1,0 +1,6 @@
+C:\Users\sunrise\YandexDisk\GIT\HomeWork3\Exercise2b\obj\Debug\Exercise2b.csprojAssemblyReference.cache
+C:\Users\sunrise\YandexDisk\GIT\HomeWork3\Exercise2b\bin\Debug\Exercise2b.exe.config
+C:\Users\sunrise\YandexDisk\GIT\HomeWork3\Exercise2b\bin\Debug\Exercise2b.exe
+C:\Users\sunrise\YandexDisk\GIT\HomeWork3\Exercise2b\bin\Debug\Exercise2b.pdb
+C:\Users\sunrise\YandexDisk\GIT\HomeWork3\Exercise2b\obj\Debug\Exercise2b.exe
+C:\Users\sunrise\YandexDisk\GIT\HomeWork3\Exercise2b\obj\Debug\Exercise2b.pdb

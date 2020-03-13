@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29806.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise1", "Exercise1\Exercise1.csproj", "{97CF8382-0269-4FB8-92EB-D28AF7DC70E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise2", "Exercise2\Exercise2.csproj", "{6241CC45-653E-40AD-AEEF-03D12D732D55}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise2b", "Exercise2b\Exercise2b.csproj", "{E4C5C111-93F7-4368-8FDF-2D92C7BBE0A4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{97CF8382-0269-4FB8-92EB-D28AF7DC70E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97CF8382-0269-4FB8-92EB-D28AF7DC70E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97CF8382-0269-4FB8-92EB-D28AF7DC70E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97CF8382-0269-4FB8-92EB-D28AF7DC70E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6241CC45-653E-40AD-AEEF-03D12D732D55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6241CC45-653E-40AD-AEEF-03D12D732D55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6241CC45-653E-40AD-AEEF-03D12D732D55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6241CC45-653E-40AD-AEEF-03D12D732D55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4C5C111-93F7-4368-8FDF-2D92C7BBE0A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4C5C111-93F7-4368-8FDF-2D92C7BBE0A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4C5C111-93F7-4368-8FDF-2D92C7BBE0A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4C5C111-93F7-4368-8FDF-2D92C7BBE0A4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BE056B30-1123-439B-A207-E102C9F369A2}
+	EndGlobalSection
+EndGlobal
