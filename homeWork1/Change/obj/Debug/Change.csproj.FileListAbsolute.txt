@@ -1,0 +1,7 @@
+D:\Drive\YandexDisk\Обучение\Код\C# Уровень1\homeWork1\Change\obj\Debug\Change.csprojAssemblyReference.cache
+D:\Drive\YandexDisk\Обучение\Код\C# Уровень1\homeWork1\Change\obj\Debug\Change.csproj.CoreCompileInputs.cache
+D:\Drive\YandexDisk\Обучение\Код\C# Уровень1\homeWork1\Change\bin\Debug\Change.exe.config
+D:\Drive\YandexDisk\Обучение\Код\C# Уровень1\homeWork1\Change\bin\Debug\Change.exe
+D:\Drive\YandexDisk\Обучение\Код\C# Уровень1\homeWork1\Change\bin\Debug\Change.pdb
+D:\Drive\YandexDisk\Обучение\Код\C# Уровень1\homeWork1\Change\obj\Debug\Change.exe
+D:\Drive\YandexDisk\Обучение\Код\C# Уровень1\homeWork1\Change\obj\Debug\Change.pdb
