@@ -1,0 +1,5 @@
+D:\Drive\YandexDisk\GIT\HomeWork5\Task1b\bin\Debug\Task1b.exe.config
+D:\Drive\YandexDisk\GIT\HomeWork5\Task1b\bin\Debug\Task1b.exe
+D:\Drive\YandexDisk\GIT\HomeWork5\Task1b\bin\Debug\Task1b.pdb
+D:\Drive\YandexDisk\GIT\HomeWork5\Task1b\obj\Debug\Task1b.exe
+D:\Drive\YandexDisk\GIT\HomeWork5\Task1b\obj\Debug\Task1b.pdb
