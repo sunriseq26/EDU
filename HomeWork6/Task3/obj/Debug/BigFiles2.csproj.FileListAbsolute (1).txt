@@ -1,0 +1,8 @@
+D:\GoogleDrive\C#-1\Урок 6\Lesson6\BigFiles2\bin\Debug\BigFiles2.exe.config
+D:\GoogleDrive\C#-1\Урок 6\Lesson6\BigFiles2\bin\Debug\BigFiles2.exe
+D:\GoogleDrive\C#-1\Урок 6\Lesson6\BigFiles2\bin\Debug\BigFiles2.pdb
+D:\GoogleDrive\C#-1\Урок 6\Lesson6\BigFiles2\obj\Debug\BigFiles2.csprojResolveAssemblyReference.cache
+D:\GoogleDrive\C#-1\Урок 6\Lesson6\BigFiles2\obj\Debug\BigFiles2.exe
+D:\GoogleDrive\C#-1\Урок 6\Lesson6\BigFiles2\obj\Debug\BigFiles2.pdb
+D:\GoogleDrive\C#-1\Урок 6\Lesson6\BigFiles2\bin\Debug\students_6.csv
+D:\GoogleDrive\C#-1\Урок 6\Lesson6\BigFiles2\bin\Debug\students_1.csv

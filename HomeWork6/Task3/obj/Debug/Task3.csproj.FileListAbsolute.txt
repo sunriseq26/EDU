@@ -1,0 +1,7 @@
+D:\Drive\YandexDisk\GIT\HomeWork6\Task3\bin\Debug\students_1.csv
+D:\Drive\YandexDisk\GIT\HomeWork6\Task3\bin\Debug\students_4.csv
+D:\Drive\YandexDisk\GIT\HomeWork6\Task3\bin\Debug\BigFiles2.exe
+D:\Drive\YandexDisk\GIT\HomeWork6\Task3\bin\Debug\BigFiles2.pdb
+D:\Drive\YandexDisk\GIT\HomeWork6\Task3\obj\Debug\Task3.csprojAssemblyReference.cache
+D:\Drive\YandexDisk\GIT\HomeWork6\Task3\obj\Debug\BigFiles2.exe
+D:\Drive\YandexDisk\GIT\HomeWork6\Task3\obj\Debug\BigFiles2.pdb

@@ -1,0 +1,12 @@
+C:\Users\Sunrise\source\repos\HomeWork6\Task2\bin\Debug\Task2.exe.config
+C:\Users\Sunrise\source\repos\HomeWork6\Task2\bin\Debug\Task2.exe
+C:\Users\Sunrise\source\repos\HomeWork6\Task2\bin\Debug\Task2.pdb
+C:\Users\Sunrise\source\repos\HomeWork6\Task2\obj\Debug\Task2.exe
+C:\Users\Sunrise\source\repos\HomeWork6\Task2\obj\Debug\Task2.pdb
+C:\Users\Sunrise\source\repos\HomeWork6\Task2\obj\Debug\Task2.csprojAssemblyReference.cache
+D:\Drive\YandexDisk\GIT\HomeWork6\Task2\bin\Debug\Task2.exe.config
+D:\Drive\YandexDisk\GIT\HomeWork6\Task2\bin\Debug\Task2.exe
+D:\Drive\YandexDisk\GIT\HomeWork6\Task2\bin\Debug\Task2.pdb
+D:\Drive\YandexDisk\GIT\HomeWork6\Task2\obj\Debug\Task2.csprojAssemblyReference.cache
+D:\Drive\YandexDisk\GIT\HomeWork6\Task2\obj\Debug\Task2.exe
+D:\Drive\YandexDisk\GIT\HomeWork6\Task2\obj\Debug\Task2.pdb
