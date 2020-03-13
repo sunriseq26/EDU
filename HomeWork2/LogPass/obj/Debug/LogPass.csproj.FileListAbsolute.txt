@@ -1,0 +1,5 @@
+C:\Users\sunrise\YandexDisk\GIT\HomeWork2\LogPass\bin\Debug\LogPass.exe.config
+C:\Users\sunrise\YandexDisk\GIT\HomeWork2\LogPass\bin\Debug\LogPass.exe
+C:\Users\sunrise\YandexDisk\GIT\HomeWork2\LogPass\bin\Debug\LogPass.pdb
+C:\Users\sunrise\YandexDisk\GIT\HomeWork2\LogPass\obj\Debug\LogPass.exe
+C:\Users\sunrise\YandexDisk\GIT\HomeWork2\LogPass\obj\Debug\LogPass.pdb

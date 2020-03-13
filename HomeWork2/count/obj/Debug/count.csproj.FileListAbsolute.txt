@@ -1,0 +1,6 @@
+C:\Users\sunrise\YandexDisk\GIT\HomeWork2\count\bin\Debug\count.exe.config
+C:\Users\sunrise\YandexDisk\GIT\HomeWork2\count\bin\Debug\count.exe
+C:\Users\sunrise\YandexDisk\GIT\HomeWork2\count\bin\Debug\count.pdb
+C:\Users\sunrise\YandexDisk\GIT\HomeWork2\count\obj\Debug\count.exe
+C:\Users\sunrise\YandexDisk\GIT\HomeWork2\count\obj\Debug\count.pdb
+C:\Users\sunrise\YandexDisk\GIT\HomeWork2\count\obj\Debug\count.csprojAssemblyReference.cache
