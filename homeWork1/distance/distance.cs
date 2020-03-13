@@ -11,6 +11,8 @@ namespace RMI_Stavropol
     {
         class distance
         {
+            
+
             static void Pause(string message)
             {
                 Console.Write(message);
