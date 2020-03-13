@@ -63,6 +63,7 @@ namespace RMI_Stavropol
                 return i;
             }
 
+
             static void Pause(string message)
             {
                 Console.Write(message);

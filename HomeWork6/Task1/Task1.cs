@@ -5,6 +5,7 @@
 
 using System;
 
+
 namespace RMI_Stavropol
 {
     namespace HomeWork6
