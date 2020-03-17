@@ -1,6 +1,0 @@
-C:\Users\sunrise\YandexDisk\GIT\HomeWork2\HomeWork2\bin\Debug\HomeWork2.exe.config
-C:\Users\sunrise\YandexDisk\GIT\HomeWork2\HomeWork2\bin\Debug\HomeWork2.exe
-C:\Users\sunrise\YandexDisk\GIT\HomeWork2\HomeWork2\bin\Debug\HomeWork2.pdb
-C:\Users\sunrise\YandexDisk\GIT\HomeWork2\HomeWork2\obj\Debug\min.csprojAssemblyReference.cache
-C:\Users\sunrise\YandexDisk\GIT\HomeWork2\HomeWork2\obj\Debug\HomeWork2.exe
-C:\Users\sunrise\YandexDisk\GIT\HomeWork2\HomeWork2\obj\Debug\HomeWork2.pdb

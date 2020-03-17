@@ -1,6 +1,0 @@
-C:\Users\sunrise\YandexDisk\GIT\HomeWork2\even\bin\Debug\even.exe.config
-C:\Users\sunrise\YandexDisk\GIT\HomeWork2\even\bin\Debug\even.exe
-C:\Users\sunrise\YandexDisk\GIT\HomeWork2\even\bin\Debug\even.pdb
-C:\Users\sunrise\YandexDisk\GIT\HomeWork2\even\obj\Debug\even.exe
-C:\Users\sunrise\YandexDisk\GIT\HomeWork2\even\obj\Debug\even.pdb
-C:\Users\sunrise\YandexDisk\GIT\HomeWork2\even\obj\Debug\even.csprojAssemblyReference.cache

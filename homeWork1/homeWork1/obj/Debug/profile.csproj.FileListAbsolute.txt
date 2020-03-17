@@ -1,7 +1,0 @@
-D:\Drive\YandexDisk\Обучение\Код\C# Уровень1\homeWork1\homeWork1\bin\Debug\homeWork1.exe.config
-D:\Drive\YandexDisk\Обучение\Код\C# Уровень1\homeWork1\homeWork1\bin\Debug\homeWork1.exe
-D:\Drive\YandexDisk\Обучение\Код\C# Уровень1\homeWork1\homeWork1\bin\Debug\homeWork1.pdb
-D:\Drive\YandexDisk\Обучение\Код\C# Уровень1\homeWork1\homeWork1\obj\Debug\profile.csprojAssemblyReference.cache
-D:\Drive\YandexDisk\Обучение\Код\C# Уровень1\homeWork1\homeWork1\obj\Debug\profile.csproj.CoreCompileInputs.cache
-D:\Drive\YandexDisk\Обучение\Код\C# Уровень1\homeWork1\homeWork1\obj\Debug\homeWork1.exe
-D:\Drive\YandexDisk\Обучение\Код\C# Уровень1\homeWork1\homeWork1\obj\Debug\homeWork1.pdb

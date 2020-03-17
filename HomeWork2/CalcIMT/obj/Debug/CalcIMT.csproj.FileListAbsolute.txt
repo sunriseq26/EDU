@@ -1,6 +1,0 @@
-C:\Users\sunrise\YandexDisk\GIT\HomeWork2\CalcIMT\obj\Debug\CalcIMT.csprojAssemblyReference.cache
-C:\Users\sunrise\YandexDisk\GIT\HomeWork2\CalcIMT\bin\Debug\CalcIMT.exe.config
-C:\Users\sunrise\YandexDisk\GIT\HomeWork2\CalcIMT\bin\Debug\CalcIMT.exe
-C:\Users\sunrise\YandexDisk\GIT\HomeWork2\CalcIMT\bin\Debug\CalcIMT.pdb
-C:\Users\sunrise\YandexDisk\GIT\HomeWork2\CalcIMT\obj\Debug\CalcIMT.exe
-C:\Users\sunrise\YandexDisk\GIT\HomeWork2\CalcIMT\obj\Debug\CalcIMT.pdb

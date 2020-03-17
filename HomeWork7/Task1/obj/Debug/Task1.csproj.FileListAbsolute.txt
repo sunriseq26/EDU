@@ -1,0 +1,9 @@
+D:\Drive\YandexDisk\Обучение\Код\Homework\C#Level1\HomeWork7\Task1\obj\Debug\Task1.csprojAssemblyReference.cache
+D:\Drive\YandexDisk\Обучение\Код\Homework\C#Level1\HomeWork7\Task1\obj\Debug\Task1.csproj.GenerateResource.cache
+D:\Drive\YandexDisk\Обучение\Код\Homework\C#Level1\HomeWork7\Task1\bin\Debug\Task1.exe.config
+D:\Drive\YandexDisk\Обучение\Код\Homework\C#Level1\HomeWork7\Task1\bin\Debug\Task1.exe
+D:\Drive\YandexDisk\Обучение\Код\Homework\C#Level1\HomeWork7\Task1\bin\Debug\Task1.pdb
+D:\Drive\YandexDisk\Обучение\Код\Homework\C#Level1\HomeWork7\Task1\obj\Debug\Task1.Properties.Resources.resources
+D:\Drive\YandexDisk\Обучение\Код\Homework\C#Level1\HomeWork7\Task1\obj\Debug\Task1.exe
+D:\Drive\YandexDisk\Обучение\Код\Homework\C#Level1\HomeWork7\Task1\obj\Debug\Task1.pdb
+D:\Drive\YandexDisk\Обучение\Код\Homework\C#Level1\HomeWork7\Task1\obj\Debug\RMI_Stavropol.Form1.resources
