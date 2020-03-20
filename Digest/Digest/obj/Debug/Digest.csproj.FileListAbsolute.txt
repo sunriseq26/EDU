@@ -19,3 +19,4 @@ D:\Drive\YandexDisk\GIT\Digest\Digest\obj\Debug\Digest.Properties.Resources.reso
 D:\Drive\YandexDisk\GIT\Digest\Digest\obj\Debug\Digest.csproj.GenerateResource.cache
 D:\Drive\YandexDisk\GIT\Digest\Digest\obj\Debug\Digest.exe
 D:\Drive\YandexDisk\GIT\Digest\Digest\obj\Debug\Digest.pdb
+D:\Drive\YandexDisk\GIT\Digest\Digest\obj\Debug\Digest.About.resources
