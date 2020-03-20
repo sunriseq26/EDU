@@ -30,6 +30,7 @@ namespace Digest
             cbFilter.Items.AddRange(database.ListGenre);
             cbFilter.SelectedIndexChanged += cbFilter_SelectedIndexChanged;
             UpdateInfo();
+            FilterInfo();
         }
 
         private void Timer_Tick(object sender, EventArgs e)
@@ -58,7 +59,7 @@ namespace Digest
             tbDate.Text = element.Date;
             tbGenre.Text = element.Genre;
             tbNotes.Text = element.Notes;
-            tstbCurrentNumber.Text = filter.ListCurrentNumber.ToString();
+            tstbCurrentNumberGenre.Text = filter.ListCurrentNumber.ToString();
         }
 
         private void tsbPrev_Click(object sender, EventArgs e)
@@ -71,6 +72,18 @@ namespace Digest
         {
             database.Next();
             UpdateInfo();
+        }
+
+        private void tsbPrevGenre_Click(object sender, EventArgs e)
+        {
+            filter.Prev();
+            FilterInfo();
+        }
+
+        private void tsbNextGenre_Click(object sender, EventArgs e)
+        {
+            filter.Next();
+            FilterInfo();
         }
 
         private void tsbAdd_Click(object sender, EventArgs e)
@@ -119,13 +132,12 @@ namespace Digest
         private void cbFilter_SelectedIndexChanged(object sender, EventArgs e)
         {
             string selectedState = cbFilter.SelectedItem.ToString();
+            //foreach (Element el in database.list)
+            //{
+            //    filter.Add(el);
+            //}
             filter.Filter(selectedState, filter);
             FilterInfo();
-        }
-
-        private void tbTitle_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

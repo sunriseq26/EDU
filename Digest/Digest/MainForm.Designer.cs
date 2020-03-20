@@ -70,6 +70,12 @@
             this.tsbRemove = new System.Windows.Forms.ToolStripButton();
             this.tstbCurrentNumber = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripComboBox1 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.cbFilter = new System.Windows.Forms.ToolStripComboBox();
+            this.tsbPrevGenre = new System.Windows.Forms.ToolStripButton();
+            this.tsbNextGenre = new System.Windows.Forms.ToolStripButton();
+            this.tstbCurrentNumberGenre = new System.Windows.Forms.ToolStripTextBox();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.tsStatusDate = new System.Windows.Forms.ToolStripStatusLabel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -87,12 +93,10 @@
             this.tbGenre = new System.Windows.Forms.TextBox();
             this.tabSerials = new System.Windows.Forms.TabPage();
             this.tabBooks = new System.Windows.Forms.TabPage();
-            this.cbFilter = new System.Windows.Forms.ComboBox();
             this.elementsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.elementBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mainFormBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.addFormBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -343,6 +347,7 @@
             // 
             // toolStrip1
             // 
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsbOpen,
             this.tsbSave,
@@ -352,10 +357,16 @@
             this.tsbAdd,
             this.tsbRemove,
             this.tstbCurrentNumber,
-            this.toolStripSeparator7});
+            this.toolStripSeparator7,
+            this.toolStripComboBox1,
+            this.toolStripLabel1,
+            this.cbFilter,
+            this.tsbPrevGenre,
+            this.tsbNextGenre,
+            this.tstbCurrentNumberGenre});
             this.toolStrip1.Location = new System.Drawing.Point(0, 24);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(619, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(497, 25);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -425,6 +436,7 @@
             // 
             // tstbCurrentNumber
             // 
+            this.tstbCurrentNumber.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tstbCurrentNumber.Name = "tstbCurrentNumber";
             this.tstbCurrentNumber.Size = new System.Drawing.Size(25, 25);
             // 
@@ -433,11 +445,54 @@
             this.toolStripSeparator7.Name = "toolStripSeparator7";
             this.toolStripSeparator7.Size = new System.Drawing.Size(6, 25);
             // 
+            // toolStripComboBox1
+            // 
+            this.toolStripComboBox1.Name = "toolStripComboBox1";
+            this.toolStripComboBox1.Size = new System.Drawing.Size(0, 22);
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(112, 22);
+            this.toolStripLabel1.Text = "Фильтр по жанрам";
+            // 
+            // cbFilter
+            // 
+            this.cbFilter.Name = "cbFilter";
+            this.cbFilter.Size = new System.Drawing.Size(121, 25);
+            this.cbFilter.SelectedIndexChanged += new System.EventHandler(this.cbFilter_SelectedIndexChanged);
+            // 
+            // tsbPrevGenre
+            // 
+            this.tsbPrevGenre.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbPrevGenre.Image = ((System.Drawing.Image)(resources.GetObject("tsbPrevGenre.Image")));
+            this.tsbPrevGenre.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbPrevGenre.Name = "tsbPrevGenre";
+            this.tsbPrevGenre.Size = new System.Drawing.Size(23, 22);
+            this.tsbPrevGenre.Text = "Переход назад";
+            this.tsbPrevGenre.Click += new System.EventHandler(this.tsbPrevGenre_Click);
+            // 
+            // tsbNextGenre
+            // 
+            this.tsbNextGenre.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbNextGenre.Image = ((System.Drawing.Image)(resources.GetObject("tsbNextGenre.Image")));
+            this.tsbNextGenre.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbNextGenre.Name = "tsbNextGenre";
+            this.tsbNextGenre.Size = new System.Drawing.Size(23, 22);
+            this.tsbNextGenre.Text = "toolStripButton2";
+            this.tsbNextGenre.Click += new System.EventHandler(this.tsbNextGenre_Click);
+            // 
+            // tstbCurrentNumberGenre
+            // 
+            this.tstbCurrentNumberGenre.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tstbCurrentNumberGenre.Name = "tstbCurrentNumberGenre";
+            this.tstbCurrentNumberGenre.Size = new System.Drawing.Size(25, 25);
+            // 
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsStatusDate});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 310);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 369);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(619, 22);
             this.statusStrip1.TabIndex = 2;
@@ -454,11 +509,11 @@
             this.tabControl1.Controls.Add(this.tabFilms);
             this.tabControl1.Controls.Add(this.tabSerials);
             this.tabControl1.Controls.Add(this.tabBooks);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(0, 49);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tabControl1.Location = new System.Drawing.Point(0, 52);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(619, 261);
+            this.tabControl1.Size = new System.Drawing.Size(619, 317);
             this.tabControl1.TabIndex = 3;
             // 
             // tabFilms
@@ -467,7 +522,7 @@
             this.tabFilms.Location = new System.Drawing.Point(4, 22);
             this.tabFilms.Name = "tabFilms";
             this.tabFilms.Padding = new System.Windows.Forms.Padding(3);
-            this.tabFilms.Size = new System.Drawing.Size(611, 235);
+            this.tabFilms.Size = new System.Drawing.Size(611, 291);
             this.tabFilms.TabIndex = 0;
             this.tabFilms.Text = "Фильм";
             this.tabFilms.UseVisualStyleBackColor = true;
@@ -496,7 +551,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(605, 229);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(605, 285);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // lblTitle
@@ -555,7 +610,6 @@
             this.tbTitle.Name = "tbTitle";
             this.tbTitle.Size = new System.Drawing.Size(367, 20);
             this.tbTitle.TabIndex = 5;
-            this.tbTitle.TextChanged += new System.EventHandler(this.tbTitle_TextChanged);
             // 
             // tbAuthor
             // 
@@ -605,16 +659,6 @@
             this.tabBooks.Text = "Книги";
             this.tabBooks.UseVisualStyleBackColor = true;
             // 
-            // cbFilter
-            // 
-            this.cbFilter.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.elementsBindingSource, "ListGenre", true));
-            this.cbFilter.FormattingEnabled = true;
-            this.cbFilter.Location = new System.Drawing.Point(498, 28);
-            this.cbFilter.Name = "cbFilter";
-            this.cbFilter.Size = new System.Drawing.Size(121, 21);
-            this.cbFilter.TabIndex = 4;
-            this.cbFilter.SelectedIndexChanged += new System.EventHandler(this.cbFilter_SelectedIndexChanged);
-            // 
             // elementsBindingSource
             // 
             this.elementsBindingSource.DataSource = typeof(Digest.Elements);
@@ -631,23 +675,11 @@
             // 
             this.addFormBindingSource.DataSource = typeof(Digest.AddForm);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(363, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(129, 16);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Фильтр по жанрам";
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(619, 332);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.cbFilter);
+            this.ClientSize = new System.Drawing.Size(619, 391);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.toolStrip1);
@@ -734,12 +766,16 @@
         private System.Windows.Forms.ToolStripButton tsbRemove;
         private System.Windows.Forms.ToolStripTextBox tstbCurrentNumber;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
-        private System.Windows.Forms.ComboBox cbFilter;
         private System.Windows.Forms.BindingSource elementBindingSource;
         private System.Windows.Forms.BindingSource addFormBindingSource;
         private System.Windows.Forms.BindingSource mainFormBindingSource;
         private System.Windows.Forms.BindingSource elementsBindingSource;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripLabel toolStripComboBox1;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        private System.Windows.Forms.ToolStripComboBox cbFilter;
+        private System.Windows.Forms.ToolStripButton tsbPrevGenre;
+        private System.Windows.Forms.ToolStripButton tsbNextGenre;
+        private System.Windows.Forms.ToolStripTextBox tstbCurrentNumberGenre;
     }
 }
 

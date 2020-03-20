@@ -52,7 +52,7 @@ namespace Digest
 
         public string[] ListGenre
         {
-            get 
+            get
             {
                 string[] s = new string[] { "Драма", "Фантастика" };
                 return s;
@@ -85,6 +85,7 @@ namespace Digest
 
         public void Filter(string genre, Elements filter)
         {
+            listFilter.Clear();
             Load("database.XML");
             foreach (Element element in list)
             {
