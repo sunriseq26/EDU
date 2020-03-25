@@ -1,7 +1,0 @@
-C:\Users\zaaza\source\repos\CS-2\CS-2\obj\Debug\CS-2.csprojAssemblyReference.cache
-C:\Users\zaaza\source\repos\CS-2\CS-2\obj\Debug\CS-2.csproj.CoreCompileInputs.cache
-C:\Users\zaaza\source\repos\CS-2\CS-2\bin\Debug\CS-2.exe.config
-C:\Users\zaaza\source\repos\CS-2\CS-2\bin\Debug\CS-2.exe
-C:\Users\zaaza\source\repos\CS-2\CS-2\bin\Debug\CS-2.pdb
-C:\Users\zaaza\source\repos\CS-2\CS-2\obj\Debug\CS-2.exe
-C:\Users\zaaza\source\repos\CS-2\CS-2\obj\Debug\CS-2.pdb
