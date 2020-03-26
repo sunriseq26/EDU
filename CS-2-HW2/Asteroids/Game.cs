@@ -1,8 +1,10 @@
 ﻿//Иван Кустарников
 
 //Домашнее задание.
-//1. Переопределить Update для класса Star, чтобы звезды двигались плавно из одной стороны экрана в другую. (слева на права или сверху вниз). При выходе за область экрана звезда должна появляться с другой стороны в произвольном месте.Используйте статическое поле Random внутри класса Game.
-//2. Добавить класс Asteroids, который можно наследовать от класса BaseObject и которые тоже движутся как и звезды, но при исчезновении с экрана они меняли свою картинку.
+//2. Переделать виртуальный метод Update в BaseObject в абстрактный и реализовать его в наследниках.
+//3. Сделать так, чтобы при столкновениях пули с астероидом они регенерировались в разных концах экрана.
+//4. Сделать проверку на задание размера экрана в классе Game.Если высота или ширина(Width, Height) больше 1000 или принимает отрицательное значение, выбросить исключение ArgumentOutOfRangeException().
+//5. * Создать собственное исключение GameObjectException, которое появляется при попытке создать объект с неправильными характеристиками(например, отрицательные размеры, слишком большая скорость или позиция).
 
 using System;
 using System.Drawing;
@@ -78,7 +80,7 @@ namespace Asteroids
 
             for (int i = 30; i < objs.Length; i++)
             {
-                b = rnd.Next(0, Height);
+                b = rnd.Next(0, (Height - 80));
                 c = rnd.Next(0, Width);
 
                 //Cобственное исключение GameObjectException
@@ -162,7 +164,7 @@ namespace Asteroids
 
                 if (obj.GetPosX() > Width)
                 {
-                    int b = rnd.Next(10, Height - 10);
+                    int b = rnd.Next(0, (Height - 80));
                     obj.SetPosY(b);
                     countUpd++;
                 }
@@ -172,7 +174,7 @@ namespace Asteroids
                     if (countUpd >= 30 && obj.Collision(bullet))
                     {
                         //Console.WriteLine("Clash!");
-                        int b = rnd.Next(10, Height-10);
+                        int b = rnd.Next(0, (Height - 80));
                         obj.SetPosY(b);
                         bullet.SetPosY(b);
                         System.Media.SystemSounds.Hand.Play();
@@ -185,7 +187,7 @@ namespace Asteroids
             
             if (bullet.GetPosX() < 0)
             {
-                int b = rnd.Next(10, Height - 10);
+                int b = rnd.Next(0, (Height - 80));
                 bullet.SetPosY(b);
             }
             else
