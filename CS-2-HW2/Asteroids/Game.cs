@@ -88,10 +88,12 @@ namespace Asteroids
                     throw new Exception("Значение для параметра d - направление должно быть больше 5");
                 Image astr = Image.FromFile(@"Images\Asteroids\0" + rnd.Next(0, 4).ToString() + ".png");
 
-                objs[i] = new Asteroid(new Point(c, b), new Point(d, d), new Size(50, 50), astr);
+                int e = rnd.Next(35, 60);
+
+                objs[i] = new Asteroid(new Point(c, b), new Point(d, d), new Size(e, e), astr);
             }
 
-            bullet = new Bullet(new Point(0, Game.Height / 2), new Point(d, d), new Size(50, 30), imgBullet);
+            bullet = new Bullet(new Point(0, Game.Height / 2), new Point(d, d), new Size(35, 20), imgBullet);
             objBackground1 = new Background(new Point(0, -40), new Point(3, d), new Size(imgWidth, imgHeight), background1);
             objBackground2 = new Background(new Point(imgWidth, -40), new Point(3, d), new Size(imgWidth, imgHeight), background2);
 
