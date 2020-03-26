@@ -160,7 +160,7 @@ namespace Asteroids
 
                 if (obj.GetPosX() > Width)
                 {
-                    int b = rnd.Next(0, Height);
+                    int b = rnd.Next(10, Height - 10);
                     obj.SetPosY(b);
                     countUpd++;
                 }
@@ -170,7 +170,7 @@ namespace Asteroids
                     if (countUpd >= 30 && obj.Collision(bullet))
                     {
                         //Console.WriteLine("Clash!");
-                        int b = rnd.Next(40, Height-40);
+                        int b = rnd.Next(10, Height-10);
                         obj.SetPosY(b);
                         bullet.SetPosY(b);
                         System.Media.SystemSounds.Hand.Play();
@@ -183,7 +183,7 @@ namespace Asteroids
             
             if (bullet.GetPosX() < 0)
             {
-                int b = rnd.Next(0, Height);
+                int b = rnd.Next(10, Height - 10);
                 bullet.SetPosY(b);
             }
             else
