@@ -164,4 +164,54 @@ namespace Asteroids.Objects
             if (pos.X > Game.Width + size.Width) pos.X = -size.Width;
         }
     }
+    class Background : BaseObject
+    {
+        public Background(Point pos, Point dir, Size size, Image img) :
+            base(pos, dir, size, img)
+        {
+        }
+        public override int GetPosX()
+        {
+            return pos.X;
+        }
+
+        public override void SetPosY(int b)
+        {
+            pos.Y = -40;
+            pos.X = b;
+        }
+
+        public override void SetImg(Image _img)
+        {
+            img = _img;
+            Game.buffer.Graphics.DrawImage(img, pos.X, pos.Y, size.Width, size.Height);
+        }
+
+        //public void ChangeImg(Image _img1, Image _img2)
+        //{
+        //    if (img == _img1)
+        //    {
+        //        img = _img2;
+        //        Game.buffer.Graphics.DrawImage(img, pos.X, pos.Y, size.Width, size.Height);
+        //    }
+        //    if (img == _img2)
+        //    {
+        //        img = _img1;
+        //        Game.buffer.Graphics.DrawImage(img, pos.X, pos.Y, size.Width, size.Height);
+        //    }
+        //}
+
+        public override void Draw()
+        {
+            Game.buffer.Graphics.DrawImage(img, pos.X, pos.Y, size.Width, size.Height);
+
+        }
+
+        public override void Update()
+        {
+            pos.X = pos.X - dir.X;
+            pos.Y = pos.Y;
+            //if (pos.X == - size.Width) pos.X = size.Width;
+        }
+    }
 }

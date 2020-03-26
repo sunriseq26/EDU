@@ -19,12 +19,17 @@ namespace Asteroids
         static public int Height { get; set; }
         static public float ScaleWidth { get; set; }
         static public BaseObject[] objs;
-        static Image background = Image.FromFile("Images\\fon1.jpg");
+        static Image background1 = Image.FromFile("Images\\fon1.jpg");
+        static Image background2 = Image.FromFile("Images\\fon2.jpg");
         static Image image = Image.FromFile("Images\\star.png");
         static Image imgBullet = Image.FromFile("Images\\Gun\\01.png");
         static Random rnd = new Random();
         static Bullet bullet;
-        
+        static Background objBackground1;
+        static Background objBackground2;
+        static int imgWidth = Convert.ToInt32(background1.Size.Width.ToString());
+        static int imgHeight = Convert.ToInt32(background1.Size.Height.ToString());
+
         static Game()
         {
 
@@ -84,6 +89,8 @@ namespace Asteroids
             }
 
             bullet = new Bullet(new Point(0, Game.Height / 2), new Point(d, d), new Size(50, 30), imgBullet);
+            objBackground1 = new Background(new Point(0, -40), new Point(3, d), new Size(imgWidth, imgHeight), background1);
+            objBackground2 = new Background(new Point(imgWidth, -40), new Point(3, d), new Size(imgWidth, imgHeight), background2);
 
             Timer timer = new Timer();
             timer.Interval = 100;
@@ -100,8 +107,10 @@ namespace Asteroids
 
         static public void Draw()
         {
-            
-            buffer.Graphics.DrawImage(background, 0, -40);
+
+            objBackground1.Draw();
+            objBackground2.Draw();
+            //buffer.Graphics.DrawImage(background, 0, -40);
             int count = 0;
 
             foreach (BaseObject obj in objs)
@@ -124,6 +133,21 @@ namespace Asteroids
 
         static public void Update()
         {
+            if (objBackground1.GetPosX() < -imgWidth)
+            {
+                int b = imgWidth;
+                objBackground1.SetPosY(b);
+            }
+            if (objBackground2.GetPosX() < -imgWidth)
+            {
+                int b = imgWidth;
+                objBackground2.SetPosY(b);
+            }
+            else
+            {
+                objBackground1.Update();
+                objBackground2.Update();
+            }
 
             int countUpd = 0;
 
@@ -142,8 +166,8 @@ namespace Asteroids
                     obj.Update();
                     if (countUpd >= 30 && obj.Collision(bullet))
                     {
-                        Console.WriteLine("Clash!");
-                        int b = rnd.Next(0, Height);
+                        //Console.WriteLine("Clash!");
+                        int b = rnd.Next(40, Height-40);
                         obj.SetPosY(b);
                         bullet.SetPosY(b);
                         System.Media.SystemSounds.Hand.Play();
@@ -163,6 +187,8 @@ namespace Asteroids
             {
                 bullet.Update();
             }
+
+            
         }
 
     }

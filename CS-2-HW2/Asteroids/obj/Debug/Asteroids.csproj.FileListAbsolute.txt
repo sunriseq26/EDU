@@ -44,5 +44,13 @@ D:\Drive\YandexDisk\Обучение\Код\Homework\C#Level2\CS-2-HW2\Asteroids
 D:\Drive\YandexDisk\Обучение\Код\Homework\C#Level2\CS-2-HW2\Asteroids\bin\Debug\Asteroids.exe.config
 D:\Drive\YandexDisk\Обучение\Код\Homework\C#Level2\CS-2-HW2\Asteroids\bin\Debug\Asteroids.exe
 D:\Drive\YandexDisk\Обучение\Код\Homework\C#Level2\CS-2-HW2\Asteroids\bin\Debug\Asteroids.pdb
-D:\Drive\YandexDisk\Обучение\Код\Homework\C#Level2\CS-2-HW2\Asteroids\obj\Debug\Asteroids.csproj.CoreCompileInputs.cache
 D:\Drive\YandexDisk\Обучение\Код\Homework\C#Level2\CS-2-HW2\Asteroids\bin\Debug\Images\fon1.jpg
+D:\Drive\YandexDisk\GIT\CS-2-HW2\Asteroids\bin\Debug\Images\fon1.jpg
+D:\Drive\YandexDisk\GIT\CS-2-HW2\Asteroids\bin\Debug\Images\ship.png
+D:\Drive\YandexDisk\GIT\CS-2-HW2\Asteroids\bin\Debug\Images\star.png
+D:\Drive\YandexDisk\GIT\CS-2-HW2\Asteroids\bin\Debug\Asteroids.exe.config
+D:\Drive\YandexDisk\GIT\CS-2-HW2\Asteroids\bin\Debug\Asteroids.exe
+D:\Drive\YandexDisk\GIT\CS-2-HW2\Asteroids\bin\Debug\Asteroids.pdb
+D:\Drive\YandexDisk\GIT\CS-2-HW2\Asteroids\obj\Debug\Asteroids.csprojAssemblyReference.cache
+D:\Drive\YandexDisk\GIT\CS-2-HW2\Asteroids\obj\Debug\Asteroids.exe
+D:\Drive\YandexDisk\GIT\CS-2-HW2\Asteroids\obj\Debug\Asteroids.pdb
