@@ -65,12 +65,15 @@ namespace Asteroids
                 c = rnd.Next(0, Width);
 
                 //Cобственное исключение GameObjectException
-                d = rnd.Next(10, 45); //для проверки работы исключения закомментировать
+                d = rnd.Next(10, 25); //для проверки работы исключения закомментировать
                 //d = 2; //для проверки работы исключения раскомментировать
+
+                int e = rnd.Next(2, 7);
+
                 if (d < 5)
                     throw new Exception("Значение для параметра d - направление должно быть больше 5");
 
-                objs[i] = new Star(new Point(c, b), new Point(d, d), new Size(10, 10), image);
+                objs[i] = new Star(new Point(c, b), new Point(d, d), new Size(e, e), image);
             }
 
             for (int i = 30; i < objs.Length; i++)
