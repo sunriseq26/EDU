@@ -11,6 +11,9 @@ using MyGame.Objects;
 
 namespace MyGame
 {
+    /// <summary>
+    /// Класс, в котором описывается логика игры
+    /// </summary>
     static class Game
     {
         static BufferedGraphicsContext context;
@@ -27,10 +30,16 @@ namespace MyGame
         static Background objBackground2;
         static int imgWidth = Convert.ToInt32(background1.Size.Width.ToString());
         static int imgHeight = Convert.ToInt32(background1.Size.Height.ToString());
+        
         static Game()
         {
 
         }
+
+        /// <summary>
+        /// Инициализация игры
+        /// </summary>
+        /// <param name="form"></param>
         static public void Init(Form form)
         {           
             Graphics g;
@@ -45,6 +54,10 @@ namespace MyGame
             buffer = context.Allocate(g, new Rectangle(0, 0, Width, Height));
         }
 
+
+        /// <summary>
+        /// Загрузка и создание объектов
+        /// </summary>
         static public void Load()
         {
             objs = new BaseObject[60];
@@ -83,12 +96,20 @@ namespace MyGame
 
         }
 
+        /// <summary>
+        /// Организация движения объектов
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private static void Timer_Tick(object sender, EventArgs e)
         {
             Update();
             Draw();
         }
 
+        /// <summary>
+        /// Присваиваение объектам образов
+        /// </summary>
         static public void Draw()
         {
 
@@ -148,11 +169,7 @@ namespace MyGame
                     obj.Update();
                     countUpd++;
                 }
-
-
             }
-
         }
-
     }
 }
