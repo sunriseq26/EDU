@@ -12,3 +12,10 @@ D:\Drive\YandexDisk\Обучение\Код\Homework\C#Level2\CS-2-HW2 - вер�
 D:\Drive\YandexDisk\Обучение\Код\Homework\C#Level2\CS-2-HW2 - версия 2\Task1\obj\Debug\Task1.csproj.CoreCompileInputs.cache
 D:\Drive\YandexDisk\Обучение\Код\Homework\C#Level2\CS-2-HW2 - версия 2\Task1\obj\Debug\Task1.exe
 D:\Drive\YandexDisk\Обучение\Код\Homework\C#Level2\CS-2-HW2 - версия 2\Task1\obj\Debug\Task1.pdb
+D:\Drive\YandexDisk\GIT\CS-2-HW2\Task1\obj\Debug\Task1.csprojAssemblyReference.cache
+D:\Drive\YandexDisk\GIT\CS-2-HW2\Task1\obj\Debug\Task1.csproj.CoreCompileInputs.cache
+D:\Drive\YandexDisk\GIT\CS-2-HW2\Task1\obj\Debug\Task1.exe
+D:\Drive\YandexDisk\GIT\CS-2-HW2\Task1\obj\Debug\Task1.pdb
+D:\Drive\YandexDisk\GIT\CS-2-HW2\Task1\bin\Debug\Task1.exe.config
+D:\Drive\YandexDisk\GIT\CS-2-HW2\Task1\bin\Debug\Task1.exe
+D:\Drive\YandexDisk\GIT\CS-2-HW2\Task1\bin\Debug\Task1.pdb

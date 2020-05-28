@@ -1,4 +1,13 @@
-﻿using System;
+﻿//Иван Кустарников
+
+//1. Построить три класса(базовый и 2 потомка), описывающих двух работников: с почасовой оплатой(один из потомков) и фиксированной оплатой(второй потомок).
+//а) Описать в базовом классе абстрактный метод для расчета среднемесячной заработной платы.Для «повременщиков» формула для расчета такова: «среднемесячная 
+//заработная плата = 20.8 * 8 * почасовая ставка». Для работников с фиксированной оплатой: «среднемесячная заработная плата = фиксированная месячная оплата».
+//б) Создать на базе абстрактного класса массив сотрудников и заполнить его.
+//в) * Реализовать интерфейсы для возможности сортировки массива, используя Array.Sort().
+//г) * Создать класс, содержащий массив сотрудников, и реализовать возможность вывода данных с использованием foreach.
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +19,7 @@ namespace Task1
     {
         int IComparer<Worker>.Compare(Worker obj1, Worker obj2)
         {
-            return obj2.CalcPay().CompareTo(obj1.CalcPay());
+            return obj1.CalcPay().CompareTo(obj2.CalcPay());
         }
     }
 
@@ -18,7 +27,7 @@ namespace Task1
     {
         int IComparer<Worker>.Compare(Worker obj1, Worker obj2)
         {
-            return obj2.id.CompareTo(obj1.id);
+            return obj1.ID.CompareTo(obj2.ID);
         }
     }
 
@@ -26,7 +35,7 @@ namespace Task1
     {
         int IComparer<Worker>.Compare(Worker obj1, Worker obj2)
         {
-            return string.Compare((obj1 as Worker).name, (obj2 as Worker).name);
+            return string.Compare(obj1.Name, obj2.Name);
         }
     }
 }
