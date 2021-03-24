@@ -1,4 +1,6 @@
 ﻿//using Code.Player;
+
+//using Code.Player;
 using UnityEngine;
 using static UnityEngine.Debug;
 
@@ -35,8 +37,10 @@ namespace Code
         void Update()
         {
             _groundCheckTransform = _groundCheckObject.transform;
-            var playerMove = _player.GetComponent<Player.PlayerMovement>(); 
-            playerMove.MovePlayer(_player, _rgPlayer, _animatorPlayer, _groundCheckTransform, _whatIsGround);
+            PlayerMovement.MovePlayer(_player, _rgPlayer, _animatorPlayer, _groundCheckTransform, _whatIsGround);
+            
+            //var playerMove = _player.GetComponent<Player.PlayerMovement>(); 
+            // playerMove.MovePlayer(_player, _rgPlayer, _animatorPlayer, _groundCheckTransform, _whatIsGround);
         }
     }
 }
