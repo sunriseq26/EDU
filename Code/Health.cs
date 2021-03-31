@@ -39,7 +39,7 @@ namespace Code
             } 
             if (HealthObject < _maximumHealth)
             {
-                throw new NotImplementedException();
+                throw new GameException(_maximumHealth);
             }
 
             Log("Current Health: " + HealthObject + "units");

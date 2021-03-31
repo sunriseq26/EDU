@@ -31,10 +31,10 @@ namespace Code
 
         void IAction.Action()
         {
-            if (TryGetComponent(out Renderer renderer))
-            {
-                renderer.material.color = Random.ColorHSV();
-            } 
+            // if (TryGetComponent(out Renderer renderer))
+            // {
+            //     renderer.material.color = Random.ColorHSV();
+            // } 
         }
 
         public void Initialization(IView view)

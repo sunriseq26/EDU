@@ -3,9 +3,7 @@ using UnityEngine;
 using Code.Player;
 using UnityEngine.UI;
 using System.Linq;
-using Code.Interfaces;
 using static Code.Player.PlayerMovement;
-//using static Code.Objects.PlayerObjects;
 using Code.Objects;
 using static UnityEngine.Debug;
 
@@ -21,7 +19,6 @@ namespace Code
         private GameObject _groundCheckObject;
         private Rigidbody _rgPlayer;
         private Animator _animatorPlayer;
-        private Collider _colliderPlayer;
         private Transform _groundCheckTransform;
         private LayerMask _whatIsGround;
 
@@ -63,7 +60,6 @@ namespace Code
             _animatorPlayer = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
             _whatIsGround = LayerMask.GetMask("Ground");
             _groundCheckObject = GameObject.FindGameObjectWithTag("GroundCheck");
-            _colliderPlayer = _player.GetComponent<Collider>();
             _playerIsAlive = _player.GetComponent<PlayerHealth>().IsAlive;
             Log("Player IsAlive = " + _playerIsAlive);
             

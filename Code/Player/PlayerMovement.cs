@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using static Code.GameException;
 
 namespace Code.Player
 {
@@ -52,7 +53,7 @@ namespace Code.Player
                 float _groundRadius = 0.2f;
                 bool _isGrounded = false;
             
-                if (_groundRadius > 0.4f) throw new NotImplementedException();
+                if (_groundRadius > 0.4f) throw new GameException(0.4f);
                 
                 _isGrounded = Physics.CheckSphere(groundCheck.position, 
                     _groundRadius, whatIsGround);
