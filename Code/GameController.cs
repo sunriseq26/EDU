@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 using Code.Player;
 using UnityEngine.UI;
@@ -92,6 +93,13 @@ namespace Code
 
             var _textsList = DisplayInfoOnScreen._texts;
             StartDisplay(_textLines, _textsList);
+
+            var addComponent = FindObjectOfType<EnemyMine>();
+            addComponent._onInteractionCamera += (n) =>
+            {
+                var eventCamera = new EventCamera();
+                eventCamera.EventCameraLog();
+            };
         }
         
         
