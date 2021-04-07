@@ -13,9 +13,8 @@ namespace Code
 
         public Transform CreatePlayer()
         {
-            return new GameObject("player").
-                AddSprite(_playerData.Sprite).AddCircleCollider2D().
-                AddCircleCollider2D().AddTrailRenderer().transform;
+            return new GameObject("player").AddUnit(_playerData).
+                AddRigidbody(_playerData.Mass, _playerData.AngularDrag, _playerData.IsGravity, _playerData.IsFreeze).transform;
         }
     }
 }

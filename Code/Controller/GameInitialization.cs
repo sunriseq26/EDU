@@ -16,9 +16,9 @@ namespace Code
             controllers.Add(playerInitialization);
             controllers.Add(enemyInitialization);
             controllers.Add(new InputController(inputInitialization.GetInput()));
-            controllers.Add(new MoveController(inputInitialization.GetInput(), playerInitialization.GetPlayer(), data.Player));
-            controllers.Add(new EnemyMoveController(enemyInitialization.GetMoveEnemies(), playerInitialization.GetPlayer()));
-            controllers.Add(new CameraController(playerInitialization.GetPlayer(), camera.transform));
+            controllers.Add(new MoveController(inputInitialization.GetInput(), playerInitialization.GetPlayer().transform, data.Player));
+            controllers.Add(new EnemyMoveController(enemyInitialization.GetMoveEnemies(), playerInitialization.GetPlayer().transform));
+            controllers.Add(new CameraController(playerInitialization.GetPlayer().transform, camera.transform));
             controllers.Add(new EndGameController(enemyInitialization.GetEnemies(), playerInitialization.GetPlayer().gameObject.GetInstanceID()));
         }
     }

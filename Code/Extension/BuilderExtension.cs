@@ -10,10 +10,13 @@ namespace Code
             return gameObject;
         }
 
-        public static GameObject AddRigidbody2D(this GameObject gameObject, float mass)
+        public static GameObject AddRigidbody(this GameObject gameObject, float mass, float angularDrag, bool isGravity, bool isFreeze)
         {
-            var component = gameObject.GetOrAddComponent<Rigidbody2D>();
+            var component = gameObject.GetOrAddComponent<Rigidbody>();
             component.mass = mass;
+            component.angularDrag = angularDrag;
+            component.useGravity = isGravity;
+            component.freezeRotation = isFreeze;
             return gameObject;
         }
 
@@ -33,6 +36,12 @@ namespace Code
         {
             var component = gameObject.GetOrAddComponent<SpriteRenderer>();
             component.sprite = sprite;
+            return gameObject;
+        }
+        
+        public static GameObject AddUnit(this GameObject gameObject, PlayerData player)
+        {
+            gameObject = Object.Instantiate(player.Player, player.Position, Quaternion.identity);
             return gameObject;
         }
 

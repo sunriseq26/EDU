@@ -7,6 +7,7 @@ namespace Code
         private readonly Transform _player;
         private readonly Transform _mainCamera;
         private readonly Vector3 _offset;
+        private readonly float _angelRotationX = 27.5f;
 
         public CameraController(Transform player, Transform mainCamera)
         {
@@ -17,8 +18,8 @@ namespace Code
 
         public void LateExecute(float deltaTime)
         {
-            _mainCamera.rotation = Quaternion.Euler(_mainCamera.rotation.x, _player.rotation.eulerAngles.y, _mainCamera.rotation.z);
-            _mainCamera.position = _mainCamera.localRotation * _offset + _player.position;
+            _mainCamera.rotation = Quaternion.Euler(_angelRotationX, _player.rotation.eulerAngles.y, _mainCamera.rotation.z);
+            _mainCamera.position = _player.localRotation * _offset + _player.position;
         }
     }
 }

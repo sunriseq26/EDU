@@ -46,12 +46,15 @@ namespace Code
 
         public void Execute(float deltaTime)
         {
+            if (_rotation != 0)
+            {
+                var sensitivity = _unitData.MouseSensitivity * deltaTime;
+                _angelRotation.Set(0f, _rotation * sensitivity, 0f);
+                _unit.transform.Rotate(_angelRotation);
+            }
             var speed = deltaTime * _unitData.Speed;
-            var sensitivity = deltaTime * _unitData.MouseSensitivity;
-            _move.Set(_horizontal * speed, _vertical * speed, 0.0f);
-            _angelRotation.Set(0f, _rotation * sensitivity, 0f);
-            _unit.localPosition += _move;
-            _unit.localRotation = Quaternion.Euler(_angelRotation);
+            _move.Set(_horizontal * speed, 0.0f, _vertical * speed);
+            _unit.transform.Translate(_move);
         }
 
         public void Cleanup()

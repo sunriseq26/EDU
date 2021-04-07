@@ -8,12 +8,12 @@ namespace Code
         public event Action<int> OnTriggerEnterChange;
         [SerializeField] private float _speed;
         [SerializeField] private float _stopDistance;
-        private Rigidbody2D _rigidbody2D;
+        private Rigidbody _rigidbody2D;
         private Transform _transform;
 
         private void Start()
         {
-            _rigidbody2D = GetComponent<Rigidbody2D>();
+            _rigidbody2D = GetComponent<Rigidbody>();
             _transform = transform;
         }
 
