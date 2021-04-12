@@ -8,12 +8,12 @@ namespace Code
         public event Action<int> OnTriggerEnterChange;
         [SerializeField] private float _speed;
         [SerializeField] private float _stopDistance;
-        private Rigidbody _rigidbody2D;
+        private Rigidbody _rigidbody;
         private Transform _transform;
 
         private void Start()
         {
-            _rigidbody2D = GetComponent<Rigidbody>();
+            _rigidbody = GetComponent<Rigidbody>();
             _transform = transform;
         }
 
@@ -22,15 +22,15 @@ namespace Code
             if ((_transform.localPosition - point).sqrMagnitude >= _stopDistance * _stopDistance)
             {
                 var dir = (point - _transform.localPosition).normalized;
-                _rigidbody2D.velocity = dir * _speed;
+                _rigidbody.velocity = dir * _speed;
             }
             else
             {
-                _rigidbody2D.velocity = Vector2.zero;
+                _rigidbody.velocity = Vector3.zero;
             }
         }
 
-        private void OnTriggerEnter2D(Collider2D other)
+        private void OnTriggerEnter(Collider other)
         {
             OnTriggerEnterChange?.Invoke(other.gameObject.GetInstanceID());
         }

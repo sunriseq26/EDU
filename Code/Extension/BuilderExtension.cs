@@ -2,7 +2,7 @@
 
 namespace Code
 {
-    public static partial class BuilderExtension
+    public static class BuilderExtension
     {
         public static GameObject SetName(this GameObject gameObject, string name)
         {

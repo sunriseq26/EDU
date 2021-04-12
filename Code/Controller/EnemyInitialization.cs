@@ -5,19 +5,23 @@ namespace Code
     internal sealed class EnemyInitialization : IInitialization
     {
         private readonly IEnemyFactory _enemyFactory;
+        private readonly EnemyData _data;
         private CompositeMove _enemy;
         private List<IEnemy> _enemies;
 
         public EnemyInitialization(IEnemyFactory enemyFactory)
         {
             _enemyFactory = enemyFactory;
+            _data = _enemyFactory.Data;
             _enemy = new CompositeMove();
-            var enemy = _enemyFactory.CreateEnemy(EnemyType.Small);
-            _enemy.AddUnit(enemy);
-            _enemies = new List<IEnemy>
+            _enemies = new List<IEnemy>();
+            foreach (var dataListEnemyInfo in _data.ListEnemyInfos)
             {
-                enemy
-            };
+                var enemy = _enemyFactory.CreateEnemy(dataListEnemyInfo.Type);
+                _enemy.AddUnit(enemy);
+                _enemies.Add(enemy);
+                //Debug.Log(dataListEnemyInfo.Type);
+            }
         }
         
         public void Initialization()

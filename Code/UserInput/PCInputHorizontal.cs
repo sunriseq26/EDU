@@ -5,7 +5,7 @@ namespace Code
 {
     public sealed class PCInputHorizontal : IUserInputProxy
     {
-        public event Action<float> AxisOnChange = delegate(float f) {  };
+        public event Action<float> AxisOnChange = delegate {  };
         
         public void GetAxis()
         {

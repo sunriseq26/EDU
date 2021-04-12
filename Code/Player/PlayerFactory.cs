@@ -13,7 +13,7 @@ namespace Code
 
         public Transform CreatePlayer()
         {
-            return new GameObject("player").AddUnit(_playerData).
+            return new GameObject("Player").AddUnit(_playerData).
                 AddRigidbody(_playerData.Mass, _playerData.AngularDrag, _playerData.IsGravity, _playerData.IsFreeze).transform;
         }
     }

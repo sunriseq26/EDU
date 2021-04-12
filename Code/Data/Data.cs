@@ -8,8 +8,10 @@ namespace Code
     {
         [SerializeField] private string _playerDataPath;
         [SerializeField] private string _enemyDataPath;
+        [SerializeField] private string _interactiveObjectDataPath;
         private PlayerData _player;
         private EnemyData _enemy;
+        private InteractiveObjectData _interactiveObject;
     
 
         public PlayerData Player
@@ -39,6 +41,18 @@ namespace Code
             }
         }
         
+        public InteractiveObjectData InteractiveObject
+        {
+            get
+            {
+                if (_interactiveObject == null)
+                {
+                    _interactiveObject = Load<InteractiveObjectData>("Data/" + _interactiveObjectDataPath);
+                }
+
+                return _interactiveObject;
+            }
+        }
         
         private T Load<T>(string resourcesPath) where T : Object =>
             Resources.Load<T>(Path.ChangeExtension(resourcesPath, null));

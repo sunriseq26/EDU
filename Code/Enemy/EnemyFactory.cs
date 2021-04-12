@@ -4,16 +4,16 @@ namespace Code
 {
     public sealed class EnemyFactory : IEnemyFactory
     {
-        private readonly EnemyData _data;
+        public EnemyData Data { get; }
 
         public EnemyFactory(EnemyData data)
         {
-            _data = data;
+            Data = data;
         }
         
         public IEnemy CreateEnemy(EnemyType type)
         {
-            var enemyProvider = _data.GetEnemy(type);
+            var enemyProvider = Data.GetEnemy(type);
             return Object.Instantiate(enemyProvider);
         }
     }

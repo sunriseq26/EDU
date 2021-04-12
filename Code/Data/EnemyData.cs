@@ -9,13 +9,15 @@ namespace Code
     public sealed class EnemyData : ScriptableObject
     {
         [Serializable] 
-        private struct EnemyInfo
+        public struct EnemyInfo
         {
             public EnemyType Type;
             public EnemyProvider EnemyPrefab;
         }
 
         [SerializeField] private List<EnemyInfo> _enemyInfos;
+
+        public List<EnemyInfo> ListEnemyInfos => _enemyInfos;
 
         public EnemyProvider GetEnemy(EnemyType type)
         {
