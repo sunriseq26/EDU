@@ -1,41 +1,48 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 namespace Code
 {
     internal sealed class EndGameController  : IInitialization, ICleanup
     {
+        private PlayerHealthController _health;
         private readonly IEnumerable<IEnemy> _getEnemies;
         private readonly int _getInstanceID;
+        private Canvas _canvas;
+        private Button _restartButton;
 
-        public EndGameController(IEnumerable<IEnemy> getEnemies, int getInstanceID)
+        public EndGameController(PlayerHealthController health)
         {
-            _getEnemies = getEnemies;
-            _getInstanceID = getInstanceID;
+            _health = health;
         }
 
         public void Initialization()
         {
-            foreach (var enemy in _getEnemies)
-            {
-                enemy.OnTriggerEnterChange += EnemyOnOnTriggerEnterChange;
-            }
+            _health.OnDied += OnEndGame;
         }
 
-        private void EnemyOnOnTriggerEnterChange(int value)
+        private void OnEndGame(bool obj)
         {
-            if (value == _getInstanceID)
-            {
-                Debug.Log(22);
-            }
+            Time.timeScale = 0;
+            var gameObjectButton = Resources.Load<Button>("UI/RestartButton");
+            _canvas = Object.FindObjectOfType<Canvas>();
+            _restartButton = Object.Instantiate(gameObjectButton, _canvas.transform);
+            _restartButton.onClick.AddListener(RestartGame);
+        }
+
+        private void RestartGame()
+        {
+            SceneManager.LoadScene(sceneBuildIndex: 1); 
+            Time.timeScale = 1.0f;
+            
+            _restartButton.gameObject.SetActive(false);
         }
 
         public void Cleanup()
         {
-            foreach (var enemy in _getEnemies)
-            {
-                enemy.OnTriggerEnterChange -= EnemyOnOnTriggerEnterChange;
-            }
+            _health.OnDied -= OnEndGame;
         }
     }
 }

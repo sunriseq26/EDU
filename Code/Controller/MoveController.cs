@@ -14,10 +14,11 @@ namespace Code
         private IUserInputProxy _horizontalInputProxy;
         private IUserInputProxy _verticalInputProxy;
         private IUserInputProxy _rotationInputProxy;
+        private bool _isAlive;
 
 
         public MoveController((IUserInputProxy inputHorizontal, IUserInputProxy inputVertical, IUserInputProxy inputRotation) input,
-            Transform unit, IUnit unitData)
+            Transform unit, IUnit unitData, IAlive isAlive)
         {
             _unit = unit;
             _unitData = unitData;
@@ -27,6 +28,7 @@ namespace Code
             _horizontalInputProxy.AxisOnChange += HorizontalOnAxisOnChange;
             _verticalInputProxy.AxisOnChange += VerticalOnAxisOnChange;
             _rotationInputProxy.AxisOnChange += RotationOnAxisOnChange;
+            _isAlive = isAlive.IsAlive;
         }
 
         private void VerticalOnAxisOnChange(float value)
@@ -46,7 +48,7 @@ namespace Code
 
         public void Execute(float deltaTime)
         {
-            if (_rotation != 0)
+            if (_rotation != 0 && _isAlive)
             {
                 var sensitivity = _unitData.MouseSensitivity * deltaTime;
                 _angelRotation.Set(0f, _rotation * sensitivity, 0f);

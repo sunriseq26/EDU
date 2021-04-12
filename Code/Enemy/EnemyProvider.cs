@@ -8,6 +8,7 @@ namespace Code
         public event Action<int> OnTriggerEnterChange;
         [SerializeField] private float _speed;
         [SerializeField] private float _stopDistance;
+        private int _takeDamage = 10;
         private Rigidbody _rigidbody;
         private Transform _transform;
 
@@ -32,7 +33,11 @@ namespace Code
 
         private void OnTriggerEnter(Collider other)
         {
-            OnTriggerEnterChange?.Invoke(other.gameObject.GetInstanceID());
+            if (!other.CompareTag("Player"))
+            {
+                return;
+            }
+            OnTriggerEnterChange?.Invoke(_takeDamage);
         }
     }
 }

@@ -7,20 +7,24 @@ namespace Code
 {
     public class PlayerHealthController : IExecute, IInitialization, ICleanup, IAlive, IHealth
     {
-        private readonly Transform _unit;
+        //private readonly Transform _unit;
         private readonly PlayerData _playerDataHealth;
         private readonly IEnumerable<IInteractiveObject> _getInteractiveObjects;
-        private readonly int _getInstanceID;
+        private readonly IEnumerable<IEnemy> _getEnemies;
+        private readonly GameObject _getPlayer;
         //private int _valueHealth;
         private int _maximumValueHealth;
 
+        public event Action<bool> OnDied;
         public bool IsAlive { get; set; } = true;
 
         public int PlayerHealth { get; set; }
 
-        public PlayerHealthController(PlayerData playerData)
+        public PlayerHealthController(PlayerData playerData, IEnumerable<IEnemy> getEnemies)
         {
             _playerDataHealth = playerData;
+            _getEnemies = getEnemies;
+            _getPlayer = GameObject.FindGameObjectWithTag("Player");
             PlayerHealth = _playerDataHealth.ValueHealth;
             _maximumValueHealth = _playerDataHealth.MaximumValueHealth;
             Debug.Log("Health " + PlayerHealth + " Maximum " + _maximumValueHealth);
@@ -33,12 +37,17 @@ namespace Code
 
         public void Initialization()
         {
+            foreach (var enemy in _getEnemies)
+            {
+                enemy.OnTriggerEnterChange += TakeDamage;
+            }
         }
         
         
         public void TakeDamage(int damage)
         {
             PlayerHealth -= damage;
+                
             Log("Remaining health units: " + PlayerHealth);
 
             if (PlayerHealth < 0)
@@ -47,12 +56,10 @@ namespace Code
             }
             if (PlayerHealth == 0)
             {
-                Die();
-                IsAlive = false;
-                Time.timeScale = 0;
+                OnDied?.Invoke(Die());
             }
         }
-
+        
         public void ReplenishHealth(int healthUnit)
         {
             Log("Good: " + healthUnit + "units");
@@ -67,8 +74,11 @@ namespace Code
             Log("Current Health: " + PlayerHealth + "units");
         }
 
-        public void Die()
+        public bool Die()
         {
+            IsAlive = false;
+            Debug.Log("Enter");
+            return IsAlive;
         }
         
         public void Cleanup()

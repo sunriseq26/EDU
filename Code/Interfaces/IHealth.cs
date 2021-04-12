@@ -1,4 +1,6 @@
-﻿namespace Code
+﻿using UnityEngine;
+
+namespace Code
 {
     public interface IHealth
     {
@@ -6,6 +8,6 @@
         
         void TakeDamage(int damage);
         void ReplenishHealth(int healthUnit);
-        void Die();
+        //IAlive Die();
     }
 }
