@@ -10,16 +10,18 @@ namespace Code
         private readonly InteractiveObjectData _data;
         private List<IInteractiveObject> _interactiveObjects;
 
-        public InteractiveObjectInitialization(IInteractiveObjectFactory interactiveObjectFactory, IView view, IHealth health)
+        public InteractiveObjectInitialization(IInteractiveObjectFactory interactiveObjectFactory, IView view, IHealth health, InteractiveObjectData interactiveObjectData)
         {
             _interactiveObjectFactory = interactiveObjectFactory;
             _data = _interactiveObjectFactory.Data;
+            interactiveObjectData.KeyCount = 0;
+            Debug.Log($"Current Keys: {interactiveObjectData.KeyCount}");
             _interactiveObjects = new List<IInteractiveObject>();
             foreach (var dataListInteractiveObjectInfo in _data.ListInteractiveObjectInfos)
             {
                 var interactiveObject =
                     _interactiveObjectFactory.CreateInteractiveObject(dataListInteractiveObjectInfo.Type);
-                interactiveObject.Initialization(view, health);
+                interactiveObject.Initialization(view, health, interactiveObjectData);
                 interactiveObject.OnTriggerEnterChange += InteractiveObjectOnDestroyChange;
                 _interactiveObjects.Add(interactiveObject);
                 Debug.Log(interactiveObject);

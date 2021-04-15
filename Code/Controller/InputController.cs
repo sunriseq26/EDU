@@ -1,7 +1,10 @@
-﻿namespace Code
+﻿using UnityEngine;
+
+namespace Code
 {
     public sealed class InputController : IExecute
     {
+        private readonly ISaveDataRepository _saveDataRepository;
         private readonly IUserInputProxy _horizontal;
         private readonly IUserInputProxy _vertical;
         private readonly IUserInputProxy _rotation;

@@ -12,10 +12,10 @@ namespace Code
             var playerInitialization = new PlayerInitialization(playerFactory, data.Player.Position);
             var enemyFactory = new EnemyFactory(data.Enemy);
             var enemyInitialization = new EnemyInitialization(enemyFactory);
-            var playerHealthInitialization = new PlayerHealthController(data.Player,enemyInitialization.GetEnemies());
+            var playerHealthInitialization = new PlayerHealthController(data.Player, enemyInitialization.GetEnemies(), playerInitialization.GetPlayer().transform);
             var interactiveObjectFactory = new InteractiveObjectFactory(data.InteractiveObject);
             var displayInfo = new DisplayInfo(playerHealthInitialization);
-            var interactiveObjectInitialization = new InteractiveObjectInitialization(interactiveObjectFactory, displayInfo, playerHealthInitialization);
+            var interactiveObjectInitialization = new InteractiveObjectInitialization(interactiveObjectFactory, displayInfo, playerHealthInitialization, data.InteractiveObject);
             var miniMapInitialization = new MiniMapInitialization(playerInitialization.GetPlayer().transform);
             // var displayInfo = new DisplayInfo();
             // var view = interactiveObjectInitialization.Initialization(displayInfo);
@@ -30,6 +30,10 @@ namespace Code
             controllers.Add(new CameraController(playerInitialization.GetPlayer().transform, camera.transform));
             controllers.Add(new EndGameController(playerHealthInitialization));
             controllers.Add(new MiniMapController(playerInitialization.GetPlayer().transform, miniMapInitialization.GetMiniMap()));
+            controllers.Add((new EnemyController(enemyInitialization.GetEnemies(), displayInfo,
+                playerHealthInitialization)));
+            //controllers.Add(new KeyController());
+            controllers.Add(new SaveDataController(playerInitialization.GetPlayer().transform));
         }
     }
 }

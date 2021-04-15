@@ -11,7 +11,7 @@ namespace Code
         private readonly PlayerData _playerDataHealth;
         private readonly IEnumerable<IInteractiveObject> _getInteractiveObjects;
         private readonly IEnumerable<IEnemy> _getEnemies;
-        private readonly GameObject _getPlayer;
+        private readonly Transform _getPlayer;
         //private int _valueHealth;
         private int _maximumValueHealth;
 
@@ -20,11 +20,11 @@ namespace Code
 
         public int PlayerHealth { get; set; }
 
-        public PlayerHealthController(PlayerData playerData, IEnumerable<IEnemy> getEnemies)
+        public PlayerHealthController(PlayerData playerData, IEnumerable<IEnemy> getEnemies, Transform unit)
         {
             _playerDataHealth = playerData;
             _getEnemies = getEnemies;
-            _getPlayer = GameObject.FindGameObjectWithTag("Player");
+            _getPlayer = unit;
             PlayerHealth = _playerDataHealth.ValueHealth;
             _maximumValueHealth = _playerDataHealth.MaximumValueHealth;
             Debug.Log("Health " + PlayerHealth + " Maximum " + _maximumValueHealth);

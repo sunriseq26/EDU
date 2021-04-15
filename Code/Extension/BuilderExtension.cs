@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
+using Object = UnityEngine.Object;
 
 namespace Code
 {
@@ -85,6 +87,11 @@ namespace Code
             camera.useOcclusionCulling = false;
 
             return camera;
+        }
+        
+        public static bool TryBool(this string self)
+        {
+            return Boolean.TryParse(self, out var res) && res;
         }
     }
 }

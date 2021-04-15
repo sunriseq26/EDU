@@ -7,6 +7,7 @@ namespace Code
     {
         protected IView _view;
         protected IHealth _health;
+        protected InteractiveObjectData _interactiveObjectData;
         public event Action<IInteractiveObject> OnTriggerEnterChange;
         public bool IsInteractable { get; } = true;
         
@@ -16,20 +17,24 @@ namespace Code
             {
                 return;
             }
-            
+            Debug.Log($"Current Keys: {_interactiveObjectData.KeyCount}");
             Interaction();
             OnTriggerEnterChange?.Invoke(this);
-            Destroy(gameObject);
+            if (!gameObject.GetComponent<InteriorDoor>())
+            {
+                Destroy(gameObject);
+            }
         }
 
         protected abstract void Interaction();
         
-        public void Initialization(IView view, IHealth health)
+        public void Initialization(IView view, IHealth health, InteractiveObjectData interactiveObjectData)
         {
             _view = view;
             _health = health;
+            _interactiveObjectData = interactiveObjectData;
         }
-        
+
         public int CompareTo(InteractiveObjectProvider other)
         {
             return name.CompareTo(other.name);

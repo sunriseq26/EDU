@@ -1,4 +1,6 @@
-﻿namespace Code
+﻿using UnityEngine;
+
+namespace Code
 {
     public static class AxisManager
     {

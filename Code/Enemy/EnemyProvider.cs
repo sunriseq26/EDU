@@ -6,11 +6,14 @@ namespace Code
     public sealed class EnemyProvider : MonoBehaviour, IEnemy
     {
         public event Action<int> OnTriggerEnterChange;
+
         [SerializeField] private float _speed;
         [SerializeField] private float _stopDistance;
         private int _takeDamage = 10;
         private Rigidbody _rigidbody;
         private Transform _transform;
+        private IView _view;
+        protected IHealth _health;
 
         private void Start()
         {
@@ -38,6 +41,13 @@ namespace Code
                 return;
             }
             OnTriggerEnterChange?.Invoke(_takeDamage);
+            _view.Display(_view.FirstKeyText, _health.PlayerHealth, _view.FirstText);
+        }
+        
+        public void Initialization(IView view, IHealth health)
+        {
+            _view = view;
+            _health = health;
         }
     }
 }

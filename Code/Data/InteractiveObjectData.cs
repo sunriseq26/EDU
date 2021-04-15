@@ -20,10 +20,17 @@ namespace Code
 
         public List<InteractiveObjectInfo> ListInteractiveObjectInfos => _interactiveObjectInfos;
 
+        public int KeyCount { get; set; }
+        
         public InteractiveObjectProvider GetInteractiveObject(InteractiveObjectType type)
         {
             var interactiveObjectInfo = _interactiveObjectInfos.First(info => info.Type == type);
             return interactiveObjectInfo.InteractiveObjectPrefab;
+        }
+
+        public void TakeObject(int obj, int count)
+        {
+            obj += count;
         }
     }
 }
