@@ -7,6 +7,7 @@ namespace Asteroids
         private float _maximumHealth;
 
         public float Health { get; set; }
+        public float Damage { get; }
         
         public PlayerHealth(float health, float maximumHealth)
         {
@@ -14,7 +15,7 @@ namespace Asteroids
             _maximumHealth = health;
         }
         
-        public void ReplenishHealth(int healthUnit)
+        public void ReplenishHealth(float healthUnit)
         {
             if (Health > _maximumHealth)
             {
@@ -27,7 +28,8 @@ namespace Asteroids
         }
 
 
-        public void TakeDamage(int damage)
+
+        public void TakeDamage(float damage)
         {
             if (Health <= 0)
             {

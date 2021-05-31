@@ -3,7 +3,8 @@
     public interface IDamage
     {
         float Health { get; set; }
-        void TakeDamage(int damage);
-        void ReplenishHealth(int healthUnit);
+        float Damage { get; }
+        void TakeDamage(float damage);
+        void ReplenishHealth(float healthUnit);
     }
 }
