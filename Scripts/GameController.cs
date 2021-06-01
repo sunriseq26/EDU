@@ -11,7 +11,9 @@ namespace Asteroids
         [SerializeField] private float _forceBullet;
         
         private IDataPlayer _dataPlayer;
-        //private GameObject _player;
+        private GameObject _player;
+        private Rigidbody2D _rigidbodyPlayer;
+        
         private Camera _camera;
         private Enemy _enemy;
         private Ship _ship;
@@ -27,14 +29,16 @@ namespace Asteroids
             Enemy.Factory.Create(new Health(100.0f, 10.0f));
             
             //return;
+            _player = FindObjectOfType<Player>().gameObject;
+            _dataPlayer = _player.GetComponent<IDataPlayer>();
+            _rigidbodyPlayer = _player.GetComponent<Rigidbody2D>();
             
-            _dataPlayer = GetComponent<IDataPlayer>();
-            Debug.Log(_dataPlayer.Speed);
+            
             _camera = Camera.main;
-            var moveTransform = new AccelerationMove(_dataPlayer.TransformPlayer, _dataPlayer.Speed, _dataPlayer.Acceleration, _dataPlayer.RigidbodyPlayer);
-            var rotation = new RotationShip(_dataPlayer.TransformPlayer);
+            var moveTransform = new AccelerationMove(_player.transform, _dataPlayer.Speed, _dataPlayer.Acceleration, _rigidbodyPlayer);
+            var rotation = new RotationShip(_player.transform);
             
-            _ship = new Ship(moveTransform, rotation, _dataPlayer.RigidbodyPlayer);
+            _ship = new Ship(moveTransform, rotation, _rigidbodyPlayer);
             
             return;
             Enemy.CreateAsteroidEnemy(new Health(100.0f, 100.0f));
