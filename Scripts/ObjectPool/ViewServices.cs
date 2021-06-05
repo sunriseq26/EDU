@@ -4,15 +4,15 @@ using UnityEngine;
 
 namespace ObjectPool
 {
-    internal sealed class ViewServices
+    public sealed class ViewServices
     {
         private readonly Dictionary<int, ObjectPool> _viewCache = new Dictionary<int, ObjectPool>(12);
-        
-        public void Create(GameObject prefab)
+
+        public void Create(GameObject prefab, Transform position)
         {
             if (!_viewCache.TryGetValue(prefab.GetInstanceID(), out ObjectPool viewPool))
             {
-                viewPool = new ObjectPool(prefab);
+                viewPool = new ObjectPool(prefab, position);
                 _viewCache[prefab.GetInstanceID()] = viewPool;
             }
 

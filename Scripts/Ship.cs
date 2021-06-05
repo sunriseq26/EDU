@@ -14,7 +14,6 @@ namespace Asteroids
         {
             _moveImplementation = moveImplementation;
             _rotationImplementation = rotationImplementation;
-            //Rigidbody = rigidbodyPlayer;
             _moveImplementation.Rigidbody = rigidbodyPlayer;
         }
 

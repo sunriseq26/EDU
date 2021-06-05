@@ -2,18 +2,29 @@
 
 namespace Asteroids
 {
-    public class Comet : Enemy
+    public class Comet : Enemy, IEnemyMove
     {
-        public void DependencyInjectHealth(Health hp)
+        private Vector3 _move;
+        public float Speed { get; private set; }
+        public Rigidbody2D Rigidbody { get; set; }
+        public void DependencyInjectHealth(Health hp, float speed)
         {
             Health = hp;
+            Speed = speed;
         }
 
         public void AddRigidbody2D(float mass)
         {
-            var rigidbody = gameObject.AddComponent<Rigidbody2D>();
-            rigidbody.mass = mass;
-            rigidbody.gravityScale = 0;
+            Rigidbody = gameObject.AddComponent<Rigidbody2D>();
+            Rigidbody.mass = mass;
+            Rigidbody.gravityScale = 0;
+        }
+
+        public override void Move(float horizontal, float vertical, float deltaTime)
+        {
+            var speed = deltaTime * Speed;
+            _move = new Vector3(horizontal, horizontal, 0.0f);
+            Rigidbody.AddForce(_move.normalized * speed, ForceMode2D.Impulse);
         }
     }
 }

@@ -9,6 +9,7 @@ namespace Asteroids
         public static IEnemyFactory Factory;
         private Transform _rotPool;
         private Health _health;
+        private float _damage = 10.0f;
 
         public Health Health
         {
@@ -22,6 +23,9 @@ namespace Asteroids
             }
             protected set => _health = value;
         }
+
+        public abstract void Move(float horizontal, float vertical, float deltaTime);
+
 
         public Transform RotPool
         {
@@ -69,7 +73,7 @@ namespace Asteroids
             ReturnToPool();
         }
 
-        protected void ReturnToPool()
+        public void ReturnToPool()
         {
             transform.localPosition = Vector3.zero;
             transform.localRotation = Quaternion.identity;
@@ -79,6 +83,14 @@ namespace Asteroids
             if (!RotPool)
             {
                 Destroy(gameObject);
+            }
+        }
+        
+        private void OnTriggerEnter2D(Collider2D other)
+        {
+            if (!FindObjectOfType<Bullet>())
+            {
+                _health.TakeDamage(_damage);
             }
         }
     }

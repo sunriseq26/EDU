@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Asteroids
 {
@@ -8,11 +9,8 @@ namespace Asteroids
         [SerializeField] private float _acceleration;
         [SerializeField] private float _health;
         [SerializeField] private float _maximumHealth;
-        // [SerializeField] private Rigidbody2D _bullet;
-        // [SerializeField] private Transform _barrel;
-        // [SerializeField] private float _forceBullet;
-        //private Rigidbody2D _rigidbodyPlayer;
-        private PlayerHealth _playerHealth;
+        
+        private IDamage _playerHealth;
         
         private float _damage = 2;
 
@@ -23,19 +21,18 @@ namespace Asteroids
 
         private void Awake()
         {
-            //_camera = Camera.main;
-            //var moveTransform = new AccelerationMove(transform, _speed, _acceleration, _rigidbodyPlayer);
-            //var rotation = new RotationShip(transform);
             RigidbodyPlayer = GetComponent<Rigidbody2D>();
             TransformPlayer = transform;
             _playerHealth = new PlayerHealth(_health, _maximumHealth);
         }
 
-        
 
-        private void OnCollisionEnter2D(Collision2D other)
+        private void OnTriggerEnter2D(Collider2D other)
         {
-            _playerHealth.TakeDamage(_damage);
+            if (!FindObjectOfType<Bullet>())
+            {
+                _playerHealth.TakeDamage(_damage);
+            }
         }
     }
 }

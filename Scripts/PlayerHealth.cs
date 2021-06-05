@@ -6,24 +6,23 @@ namespace Asteroids
     {
         private float _maximumHealth;
 
-        public float Health { get; set; }
-        public float Damage { get; }
+        public float HealthUnit { get; set; }
         
         public PlayerHealth(float health, float maximumHealth)
         {
-            Health = health;
+            HealthUnit = health;
             _maximumHealth = health;
         }
         
         public void ReplenishHealth(float healthUnit)
         {
-            if (Health > _maximumHealth)
+            if (HealthUnit > _maximumHealth)
             {
-                Health = _maximumHealth;
+                HealthUnit = _maximumHealth;
             }
             else
             {
-                Health += healthUnit;
+                HealthUnit += healthUnit;
             }
         }
 
@@ -31,14 +30,15 @@ namespace Asteroids
 
         public void TakeDamage(float damage)
         {
-            if (Health <= 0)
+            if (HealthUnit <= 0)
             {
                 Die();
             }
             else
             {
-                Health -= damage;
+                HealthUnit -= damage;
             }
+            Debug.Log(HealthUnit);
         }
 
         private void Die()

@@ -2,9 +2,7 @@
 {
     public interface IDamage
     {
-        float Health { get; set; }
-        float Damage { get; }
+        float HealthUnit { get; set; }
         void TakeDamage(float damage);
-        void ReplenishHealth(float healthUnit);
     }
 }
